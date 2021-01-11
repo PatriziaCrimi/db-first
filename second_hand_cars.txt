@@ -1,0 +1,27 @@
+SECOND_HAND_CARS
+id
+model
+brand
+version
+type (jeep, utilitaria, SUV, etc.)
+kilometers
+power_source (benzina, gas, ibrida, etc.)
+shifting (cambio automatico o manuale)
+driving_wheels (numero ruote motrici)
+seats_number
+emission_stage (classe emissioni e.g. Euro4)
+vehicle_registration (immatricolazione)
+vehicle_identification_number (numero di telaio)
+sales_price
+original_purchasing_price
+installment_payment (pagamento rateale)
+accessories
+condition
+availability
+quantity
+pick_up_city
+year_of_production
+first_purchase_date
+sales_date
+previous_owner_information
+buyer_information
