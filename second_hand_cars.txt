@@ -5,8 +5,8 @@ brand											VARCHAR (100)
 version											VARCHAR (100)
 type (jeep, utilitaria, SUV, etc.)				VARCHAR (50)
 kilometers										INT
-power_source (benzina, gas, ibrida, etc.)		VARCHAR (100)
-shifting (cambio automatico o manuale)			VARCHAR (100)
+power_source (benzina, gas, ibrida, etc.)		VARCHAR (50)
+shifting (cambio automatico o manuale)			VARCHAR (50)
 driving_wheels (numero ruote motrici)			TINYINT
 seats_number									TINYINT
 emission_stage (classe emissioni e.g. Euro4)	VARCHAR (20)
@@ -19,7 +19,7 @@ accessories										TEXT
 condition										VARCHAR (255)
 availability (yes/no)							VARCHAR (5)
 quantity										TINYINT
-pick_up_city									VARCHAR (100)
+pick_up_city									VARCHAR (50)
 year_of_production								YEAR
 first_purchase_date								DATE
 sales_date										DATE
