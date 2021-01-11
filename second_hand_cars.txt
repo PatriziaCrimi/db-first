@@ -1,27 +1,27 @@
 SECOND_HAND_CARS
-id
-model
-brand
-version
-type (jeep, utilitaria, SUV, etc.)
-kilometers
-power_source (benzina, gas, ibrida, etc.)
-shifting (cambio automatico o manuale)
-driving_wheels (numero ruote motrici)
-seats_number
-emission_stage (classe emissioni e.g. Euro4)
-vehicle_registration (immatricolazione)
-vehicle_identification_number (numero di telaio)
-sales_price
-original_purchasing_price
-installment_payment (pagamento rateale)
-accessories
-condition
-availability
-quantity
-pick_up_city
-year_of_production
-first_purchase_date
-sales_date
-previous_owner_information
-buyer_information
+id												INT
+model											VARCHAR (100)
+brand											VARCHAR (100)
+version											VARCHAR (100)
+type (jeep, utilitaria, SUV, etc.)				VARCHAR (50)
+kilometers										INT
+power_source (benzina, gas, ibrida, etc.)		VARCHAR (100)
+shifting (cambio automatico o manuale)			VARCHAR (100)
+driving_wheels (numero ruote motrici)			TINYINT
+seats_number									TINYINT
+emission_stage (classe emissioni e.g. Euro4)	VARCHAR (20)
+vehicle_identification_number (num. telaio)		VARCHAR (20)
+sales_price										DECIMAL(8, 2)
+original_purchasing_price						DECIMAL(8, 2)
+installment_payment (pagamento rateale: yes/no)	VARCHAR (5)
+number_of_installments							TINYINT
+accessories										TEXT
+condition										VARCHAR (255)
+availability (yes/no)							VARCHAR (5)
+quantity										TINYINT
+pick_up_city									VARCHAR (100)
+year_of_production								YEAR
+first_purchase_date								DATE
+sales_date										DATE
+previous_owner_information						TEXT		
+buyer_information								TEXT
