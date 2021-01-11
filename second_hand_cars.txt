@@ -1,37 +1,37 @@
 SECOND_HAND_CARS
-id												INT
-brand											VARCHAR (100)
-model											VARCHAR (100)
-version											VARCHAR (100)
-type (jeep, utilitaria, SUV, etc.)				VARCHAR (50)
-kilometers										INT
-shifting (cambio automatico, manuale etc.)		VARCHAR (50)
-driving_wheels (numero ruote motrici)			TINYINT
-seats_number									TINYINT
-doors_number									TINYINT
-exterior_colors									VARCHAR (255)
-interior_colors									VARCHAR (255)
-bodywork_type (tipo di carrozzeria)				TEXT
-power_source (benzina, gas, ibrida, etc.)		VARCHAR (50)
-emission_stage (classe emissioni e.g. Euro4)	VARCHAR (20)
-vehicle_identification_number (num. telaio)		VARCHAR (20)
-sales_price										DECIMAL(8, 2)
-original_purchasing_price						DECIMAL(8, 2)
-installment_payment (pagamento rateale: yes/no)	VARCHAR (5)
-number_of_installments							TINYINT
-guarantee (yes/no)								VARCHAR (5)
-years_of_guarantee								TINYINT
-accessories										TEXT
-condition										VARCHAR (100)
-description										TEXT
-availability (available/unavailable)			VARCHAR (15)
-quantity										TINYINT
-pick_up_city									VARCHAR (50)
-country_of_production							VARCHAR (50)
-year_of_production								YEAR
-first_purchase_date								DATE
-sales_date										DATE
-previous_owner_information						TEXT		
-buyer_information								TEXT
-reported_defects								TEXT
-notes											VARCHAR (255)
+id												INT, PRIMARY_KEY (AUTO_INCREMENT, NOT NULL, UNIQUE, INDEX)
+brand											VARCHAR (100), NOT NULL
+model											VARCHAR (100), NOT NULL, INDEX
+version											VARCHAR (100), NOT NULL
+type (jeep, utilitaria, SUV, etc.)				VARCHAR (50), NOT NULL, INDEX
+kilometers										INT, NOT NULL, DEFAULT ("0")
+shifting (cambio automatico, manuale etc.)		VARCHAR (50), NOT NULL
+driving_wheels (numero ruote motrici)			TINYINT, NOT NULL
+seats_number									TINYINT, NOT NULL
+doors_number									TINYINT, NOT NULL
+exterior_colors									VARCHAR (255), NULL
+interior_colors									VARCHAR (255), NULL
+bodywork_type (tipo di carrozzeria)				VARCHAR (255), NULL
+power_source (benzina, gas, ibrida, etc.)		VARCHAR (50), NOT NULL
+emission_stage (classe emissioni e.g. Euro4)	VARCHAR (20), NOT NULL
+vehicle_identification_number (num. telaio)		VARCHAR (20), NULL
+sales_price										DECIMAL(8, 2), NOT NULL
+original_purchasing_price						DECIMAL(8, 2), NULL
+installment_payment (pagamento rateale: yes/no)	VARCHAR (5), NOT NULL
+number_of_installments							TINYINT, NULL
+guarantee (yes/no)								VARCHAR (5), NOT NULL, DEFAULT ("yes")
+years_of_guarantee								TINYINT, NOT NULL, DEFAULT ("2")
+accessories										TEXT, NULL
+condition										VARCHAR (50), NOT NULL
+description										TEXT, NULL
+availability (available/unavailable)			VARCHAR (15), NOT NULL, DEFAULT ("available")
+quantity										TINYINT, NULL
+pick_up_city									VARCHAR (50), NOT NULL
+country_of_production							VARCHAR (50), NULL
+year_of_production								YEAR, NULL
+first_purchase_date								DATE, NULL
+sales_date										DATE, NULL
+previous_owner_information						TEXT, NOT NULL		
+buyer_information								TEXT, NOT NULL
+reported_defects								TEXT, NULL
+notes											VARCHAR (255), NULL
