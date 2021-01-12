@@ -4,31 +4,37 @@ brand											VARCHAR (100), NOT NULL
 model											VARCHAR (100), NOT NULL, INDEX
 version											VARCHAR (100), NOT NULL
 type (jeep, utilitaria, SUV, etc.)				VARCHAR (50), NOT NULL, INDEX
-kilometers										INT, NOT NULL, DEFAULT ("0")
-shifting (cambio automatico, manuale etc.)		VARCHAR (50), NOT NULL
+vehicle_identification_number (num. telaio)		VARCHAR (20), NOT NULL, UNIQUE, INDEX
+kilometers										MEDIUMINT, NOT NULL, DEFAULT ("0")
+shifting (cambio automatico, manuale, entrambi)	TINYINT, NOT NULL
 driving_wheels (numero ruote motrici)			TINYINT, NOT NULL
+gears_number									TINYINT, NULL
 seats_number									TINYINT, NOT NULL
 doors_number									TINYINT, NOT NULL
-exterior_colors									VARCHAR (255), NULL
-interior_colors									VARCHAR (255), NULL
-bodywork_type (tipo di carrozzeria)				VARCHAR (255), NULL
+exterior_colors									VARCHAR (50), NULL
+interior_colors									VARCHAR (50), NULL
+bodywork_type (tipo di carrozzeria)				VARCHAR (200), NULL
 power_source (benzina, gas, ibrida, etc.)		VARCHAR (50), NOT NULL
 emission_stage (classe emissioni e.g. Euro4)	VARCHAR (20), NOT NULL
-vehicle_identification_number (num. telaio)		VARCHAR (20), NULL
-sales_price										DECIMAL(8, 2), NOT NULL
+engine_capacity (cilindrata)					TINYINT, NULL
+starting_sales_price							DECIMAL(8, 2), NOT NULL
+descounted_sales_price							DECIMAL(8, 2), NOT NULL
+descount (yes/no)								TINYINT, NULL
+descount_percentage								TINYINT, NULL
 original_purchasing_price						DECIMAL(8, 2), NULL
-installment_payment (pagamento rateale: yes/no)	VARCHAR (5), NOT NULL
+installment_payment (pagamento rateale: yes/no)	TINYINT, NOT NULL
 number_of_installments							TINYINT, NULL
-guarantee (yes/no)								VARCHAR (5), NOT NULL, DEFAULT ("yes")
+guarantee (0 = no / 1 = yes)					TINYINT, NOT NULL, DEFAULT ("1")
 years_of_guarantee								TINYINT, NOT NULL, DEFAULT ("2")
 accessories										TEXT, NULL
 condition										VARCHAR (50), NOT NULL
 description										TEXT, NULL
-availability (available/unavailable)			VARCHAR (15), NOT NULL, DEFAULT ("available")
+immediate_availability (0 = no / 1 = yes)		TINYINY, NOT NULL, DEFAULT ("1")
 quantity										TINYINT, NULL
 pick_up_city									VARCHAR (50), NOT NULL
 country_of_production							VARCHAR (50), NULL
-year_of_production								YEAR, NULL
+production_year									YEAR, NULL
+registration_year (anno di immatricolazione)	YEAR, NOT NULL
 first_purchase_date								DATE, NULL
 sales_date										DATE, NULL
 previous_owner_information						TEXT, NOT NULL		
