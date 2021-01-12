@@ -5,7 +5,7 @@ model											VARCHAR (100), NOT NULL, INDEX
 version											VARCHAR (100), NOT NULL
 type (jeep, utilitaria, SUV, etc.)				VARCHAR (50), NOT NULL, INDEX
 vehicle_identification_number (num. telaio)		VARCHAR (20), NOT NULL, UNIQUE, INDEX
-kilometers										MEDIUMINT, NOT NULL, DEFAULT ("0")
+kilometers										MEDIUMINT, NOT NULL, DEFAULT (0)
 shifting (cambio automatico, manuale, entrambi)	TINYINT, NOT NULL
 driving_wheels (numero ruote motrici)			TINYINT, NOT NULL
 gears_number									TINYINT, NULL
@@ -24,12 +24,12 @@ descount_percentage								TINYINT, NULL
 original_purchasing_price						DECIMAL(8, 2), NULL
 installment_payment (pagamento rateale: yes/no)	TINYINT, NOT NULL
 number_of_installments							TINYINT, NULL
-guarantee (0 = no / 1 = yes)					TINYINT, NOT NULL, DEFAULT ("1")
-years_of_guarantee								TINYINT, NOT NULL, DEFAULT ("2")
+guarantee (0 = no / 1 = yes)					TINYINT, NOT NULL, DEFAULT (1)
+years_of_guarantee								TINYINT, NOT NULL, DEFAULT (2)
 accessories										TEXT, NULL
 condition										VARCHAR (50), NOT NULL
 description										TEXT, NULL
-immediate_availability (0 = no / 1 = yes)		TINYINY, NOT NULL, DEFAULT ("1")
+immediate_availability (0 = no / 1 = yes)		TINYINY, NOT NULL, DEFAULT (1)
 quantity										TINYINT, NULL
 pick_up_city									VARCHAR (50), NOT NULL
 country_of_production							VARCHAR (50), NULL
